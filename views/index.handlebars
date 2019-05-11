@@ -7,7 +7,7 @@
         {{#unless devoured}}
 
         <p>
-            {{burger_name}}
+            {{burgers_name}}
         </p>
         <button data-id={{this.id}} class='done'>Update</button>
 
@@ -36,4 +36,8 @@
 
     </div>
     {{/each}}
+    <hr>
+    <h2>Add a burger to the list</h2>
+    <input type='text' id='new-burger'>
+    <button id='addBurger'>Add burger!</button>
 </div>

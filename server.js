@@ -3,6 +3,7 @@ var express = require( 'express' );
 var PORT = process.env.PORT || 3000;
 
 var app = express();
+app.use( express.static( 'public' ) )
 var exphbs = require( 'express-handlebars' );
 // console.log( app )
 
