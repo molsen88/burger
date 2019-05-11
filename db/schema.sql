@@ -9,5 +9,5 @@ CREATE TABLE burgers
     AUTO_INCREMENT,
     burger_name VARCHAR
     (256) NOT NULL,
-    devoured BOOLEAN NOT NULL 
+    devoured BOOLEAN DEFAULT false
 );
