@@ -4,10 +4,14 @@ var router = express.Router()
 
 router.get( '/', function ( request, response ) {
     burgerModel.getAllBurgers( function ( data ) {
-        console.log( data, "This is from burgers_controllers bringing stuff from our database" )
-    } )
-    response.end()
+        // console.log( data, "This is from burgers_controllers bringing stuff from our database" )
 
+
+        var burgersObj = {
+            burgers: data
+        }
+        response.render( 'index', burgersObj )
+    } )
 } )
 // define the about route
 router.get( '/about', function ( req, res ) {

@@ -1,13 +1,36 @@
 <div>
     <h1>Burgers App</h1>
-    {{#each showTitle}}
+    <hr>
+    <h4>Not Added</h4>
+    {{#each burgers}}
     <div>
-        {{#unless showTitle}}
-        <h1>Home</h1>
+        {{#unless devoured}}
+
+        <p>
+            {{burger_name}}
+        </p>
+        <button data-id={{this.id}} class='done'>Update</button>
+
+        <hr>
+
         {{/unless}}
 
-        {{#if showTitle}}
-        <h1>Home</h1>
+    </div>
+    {{/each}}
+    <hr>
+    <h4>Added</h4>
+    {{#each burgers}}
+    <div>
+
+
+        {{#if devoured}}
+        <p>
+            {{burger_name}}
+        </p>
+
+        <button data-id={{this.id}} class='delete'>Delete</button>
+        <hr>
+
         {{/if}}
 
 
