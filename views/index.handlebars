@@ -1,0 +1,16 @@
+<div>
+    <h1>Burgers App</h1>
+    {{#each showTitle}}
+    <div>
+        {{#unless showTitle}}
+        <h1>Home</h1>
+        {{/unless}}
+
+        {{#if showTitle}}
+        <h1>Home</h1>
+        {{/if}}
+
+
+    </div>
+    {{/each}}
+</div>

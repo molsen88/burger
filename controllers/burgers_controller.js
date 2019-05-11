@@ -15,3 +15,14 @@ router.get( '/about', function ( req, res ) {
 } )
 
 module.exports = router
+
+
+// [
+//     RowDataPacket {
+//     id: 1,
+//         burger_name: 'Cheeseburger Deluxe',
+//             devoured: 1
+// },
+// RowDataPacket { id: 2, burger_name: 'Bacon Cheddar', devoured: 1 },
+// RowDataPacket { id: 3, burger_name: 'Veggie Burger', devoured: 1 }
+// ]
