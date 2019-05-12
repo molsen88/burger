@@ -14,9 +14,9 @@ router.get( '/', function ( request, response ) {
     } )
 } )
 // define the about route
-router.get( '/about', function ( req, res ) {
-    res.send( 'About birds' )
-} )
+// router.get( '/about', function ( req, res ) {
+//     res.send( 'About birds' )
+// } )
 
 module.exports = router
 

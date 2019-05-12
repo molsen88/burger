@@ -3,7 +3,7 @@ var express = require( 'express' );
 var PORT = process.env.PORT || 3000;
 
 var app = express();
-app.use( express.static( 'public' ) )
+app.use( express.static( 'public' ) );
 var exphbs = require( 'express-handlebars' );
 // console.log( app )
 
@@ -14,6 +14,7 @@ app.set( 'view engine', 'handlebars' );
 
 var routes = require( './controllers/burgers_controller' )
 console.log( routes )
+// var js = require( "./public/assets/js/burgerfunction.js" )
 
 // function logger( request, response, next ) {
 //     console.log( 'this is our middleware running' )
@@ -22,6 +23,7 @@ console.log( routes )
 
 // app.use( logger )
 app.use( routes )
+
 
 
 
