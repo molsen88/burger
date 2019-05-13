@@ -4,6 +4,9 @@ var PORT = process.env.PORT || 3000;
 
 var app = express();
 app.use( express.static( 'public' ) );
+
+app.use( express.json() )
+app.use( express.urlencoded( { extended: true } ) )
 var exphbs = require( 'express-handlebars' );
 // console.log( app )
 

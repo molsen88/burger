@@ -13,10 +13,28 @@ router.get( '/', function ( request, response ) {
         response.render( 'index', burgersObj )
     } )
 } )
-// define the about route
-// router.get( '/about', function ( req, res ) {
-//     res.send( 'About birds' )
-// } )
+// define the route
+router.post( '/api/burgers', function ( req, res ) {
+    console.log( req.body )
+    var frontData = req.body;
+    burgerModel.postBurgers( frontData, function ( data ) {
+        console.log( data )
+
+    } )
+    res.status( 200 ).send( "Row added to the database" )
+} )
+router.put( '/api/burgers:id', function ( req, res ) {
+    console.log( req.params, 'this is our request parameters' )
+    var id = req.params.id;
+    burgerModel.putBurgers( id, function ( data ) {
+        console.log( data, 'this row updated' )
+
+    } )
+    res.send()
+} )
+router.delete( 'burgers:id', function ( req, res ) {
+    res.send( 'About birds' )
+} )
 
 module.exports = router
 

@@ -1,15 +1,14 @@
 <div>
     <h1>Burgers App</h1>
     <hr>
-    <h4>Not Added</h4>
+    <h4>New Burgers</h4>
     {{#each burgers}}
     <div>
         {{#unless devoured}}
 
-        <p>
-            {{burgers_name}}
+        <p>{{burgers_name}}
         </p>
-        <button data-id={{this.id}} class='update'>Update</button>
+        <button data-id={{this.id}} class='eaten'>Eat</button>
 
         <hr>
 
@@ -18,7 +17,7 @@
     </div>
     {{/each}}
     <hr>
-    <h4>Added</h4>
+    <h4>Devoured</h4>
     {{#each burgers}}
     <div>
 
@@ -39,5 +38,5 @@
     <hr>
     <h2>Add a burger to the list</h2>
     <input type='text' id='new-burger'>
-    <button class='addBurger'>Add burger!</button>
+    <button id='addBurger'>Add burger!</button>
 </div>
