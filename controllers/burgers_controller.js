@@ -15,9 +15,10 @@ router.get( '/', function ( request, response ) {
 } )
 // define the route
 router.post( "/api/burgers", function ( request, response ) {
-    console.log( request.body )
+    console.log( "request.body" )
     var frontData = request.body;
     burgerModel.postBurgers( frontData, function ( data ) {
+
         console.log( data )
 
     } )
