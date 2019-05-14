@@ -14,25 +14,28 @@ router.get( '/', function ( request, response ) {
     } )
 } )
 // define the route
-router.post( '/api/burgers', function ( req, res ) {
-    console.log( req.body )
-    var frontData = req.body;
+router.post( '/api/burger', function ( request, response ) {
+    console.log( request.body )
+    var frontData = request.body;
     burgerModel.postBurgers( frontData, function ( data ) {
         console.log( data )
 
     } )
     res.status( 200 ).send( "Row added to the database" )
+    location.reload();
 } )
-router.put( '/api/burgers:id', function ( req, res ) {
-    console.log( req.params, 'this is our request parameters' )
-    var id = req.params.id;
+
+
+router.put( '/api/burger:id', function ( request, response ) {
+    console.log( request.params, 'this is our request parameters' )
+    var id = request.params.id;
     burgerModel.putBurgers( id, function ( data ) {
         console.log( data, 'this row updated' )
 
     } )
     res.send()
 } )
-router.delete( 'burgers:id', function ( req, res ) {
+router.delete( 'burgers:id', function ( request, response ) {
     res.send( 'About birds' )
 } )
 

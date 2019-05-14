@@ -1,33 +1,34 @@
-// console.log( "yo" )
 
-$( document ).on( 'click', '#addBurger', function ( event ) {
+
+$( document ).on( "click", "#addBurger", function ( event ) {
     event.preventDefault();
-    console.log( 'You clicked add burger' )
+    console.log( "You clicked add burger" )
     $.ajax( {
-        url: '/api/burgers',
-        method: 'POST',
+        url: "/api/burger",
+        method: "POST",
         data: {
-            burgers: $( '#new-burger' ).val().trim()
-
+            burgers: $( "#new-burger" ).val().trim()
         }
 
     } ).then( function ( serverResponse ) {
         console.log( serverResponse, "This is the response from the server" )
-        location.reload();
+
     } )
+    location.reload();
 
 } )
 
-$( document ).on( 'click', '.eaten', function ( event ) {
+
+$( document ).on( "click", ".eaten", function ( event ) {
     event.preventDefault();
-    console.log( 'You ate the burger' )
-    var id = $( this ).attr( 'data-id' )
+    console.log( "You ate the burger" )
+    var id = $( this ).attr( "data-id" )
     console.log( id )
     $.ajax( {
-        url: "/api/burgers/" + id,
+        url: "/api/burger/" + id,
         method: "PUT",
         data: {
-            burgers: $( '#new-burger' ).val().trim()
+            burgers: $( "#new-burger" ).val().trim()
 
         }
 
