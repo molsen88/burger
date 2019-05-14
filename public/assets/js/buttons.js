@@ -4,7 +4,7 @@ $( document ).on( "click", "#addBurger", function ( event ) {
     event.preventDefault();
     console.log( "You clicked add burger" )
     $.ajax( {
-        url: "/api/burger",
+        url: "/api/burgers",
         method: "POST",
         data: {
             burgers: $( "#new-burger" ).val().trim()
@@ -25,7 +25,7 @@ $( document ).on( "click", ".eaten", function ( event ) {
     var id = $( this ).attr( "data-id" )
     console.log( id )
     $.ajax( {
-        url: "/api/burger/" + id,
+        url: "/api/burgers/" + id,
         method: "PUT",
         data: {
             burgers: $( "#new-burger" ).val().trim()

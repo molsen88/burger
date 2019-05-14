@@ -14,7 +14,7 @@ router.get( '/', function ( request, response ) {
     } )
 } )
 // define the route
-router.post( '/api/burger', function ( request, response ) {
+router.post( "/api/burgers", function ( request, response ) {
     console.log( request.body )
     var frontData = request.body;
     burgerModel.postBurgers( frontData, function ( data ) {
@@ -26,7 +26,7 @@ router.post( '/api/burger', function ( request, response ) {
 } )
 
 
-router.put( '/api/burger:id', function ( request, response ) {
+router.put( '/api/burgers:id', function ( request, response ) {
     console.log( request.params, 'this is our request parameters' )
     var id = request.params.id;
     burgerModel.putBurgers( id, function ( data ) {
